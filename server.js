@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGODB_URI, {
         // useFindAndModify: false,
         useUnifiedTopology: true
     })
-    .then(() => console.log('DB Connection Successfull'))
+    .then(() => console.log('DB Connection Successful'))
     .then(() => {
         // const Workout = require('./models/workouts');
         // Workout.find({}, function(err, workouts) {

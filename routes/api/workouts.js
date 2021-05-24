@@ -14,28 +14,10 @@ router.post('', async(req, res) => {
 });
 
 router.get('/range', async(req, res) => {
-    // console.log("test");
-    // let workout = await Workout.findOne({ _id: req.params.id });
-    console.log("stats")
-        // res.json(workout);
-
-    // find all categories
-    // be sure to include its associated Products
-    // try {
-    //     const getAllCategories = await Category.findAll({
+    let workout = await Workout.find({});
+    res.json(workout);
 
 
-    //     });
-
-    //     const categories = getAllCategories.map((product) =>
-    //         product.get({ plain: true })
-    //     );
-    //     res.json({ "categories": categories })
-
-    // } catch (err) {
-    //     console.log(err);
-    //     res.status(500).json(err);
-    // }
 });
 
 router.get('/', async(req, res) => {
@@ -55,6 +37,7 @@ router.get('/', async(req, res) => {
 
 router.get('/:id', async(req, res) => {
     // res.json({})
+    console.log("tester")
     let workout = await Workout.findOne({ _id: req.params.id });
     workout.exercises.push(req.body);
     res.json(workout);
