@@ -27,9 +27,7 @@ router.get('/', async(req, res) => {
 
 });
 
-router.get('/exercise', async(req, res) => {
-    console.log("tester")
-})
+
 
 
 
