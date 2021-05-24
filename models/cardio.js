@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const cardioSchema = new Schema({
+const CardioSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -19,7 +19,6 @@ const cardioSchema = new Schema({
         required: true
     }
 
-})
+});
 
-mongoose.model('Cardio', cardioSchema);
-module.exports = Cardio;
+module.exports = mongoose.model('CardioSchema', CardioSchema);

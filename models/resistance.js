@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const resistanceSchema = new Schema({
+const resistanceSchema = new mongoose.Schema({
     exerciseName: {
         type: String,
+
         required: true
 
     },
@@ -32,7 +33,7 @@ const resistanceSchema = new Schema({
         required: true
     }
 
-})
+});
 
-mongoose.model('Resistance', resistanceSchema);
-module.exports = Resistance;
+
+module.exports = mongoose.model('Resistance', resistanceSchema);
